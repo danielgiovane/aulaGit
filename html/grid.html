@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        
+        *{
+            padding: 0; margin: 0;
+            color: white;
+        }
+
+        #main{
+            display: grid;
+            grid-template-rows: 15vh 10vh 55vh 20vh;
+            grid-template-areas: "cabecalho cabecalho" "navegacao navegacao" "content aside" "rodape rodape"
+        }
+
+        .cabecalho{
+            grid-area: cabecalho;
+            background-color: blue;
+        }
+
+        .navegacao{
+            grid-area: navegacao;
+            background-color: green;
+        }
+
+        .content{
+            grid-area: content;
+            background-color: coral;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: cornflowerblue;
+        }
+        .rodape{
+            grid-area: rodape;
+            background-color: indianred;
+        }
+
+        @media screen and (max-width: 568px){
+            body{background-color: grey;}
+            #main{grid-template-areas: "cabecalho" "content" "aside" "rodape";}
+            .navegacao{grid-area: cabecalho; margin-top: 20px;}
+        }
+
+    </style>
+
+    <nav id="main">
+        <header class="cabecalho">Cabecalho</header>
+        <nav class="navegacao">navegacao</nav>
+        <article class="content">Content</article>
+        <aside class="aside">Aside</aside>
+        <footer class="rodape">rodape</footer>
+    </nav>
+    
+</body>
+</html>

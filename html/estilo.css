@@ -1,0 +1,29 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "menu-lateral cabecalho" "menu-lateral principal" "menu-lateral principal"
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    background-color:  rgb(241, 241, 231);
+}
+.menu-lateral{
+    grid-area: menu-lateral;
+    background-color: whitesmoke;
+}
+
+.principal{
+    grid-area: principal;
+    background-color: rgb(241, 241, 231);
+
+}
+
